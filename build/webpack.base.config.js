@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: ['@babel/polyfill', path.resolve(__dirname, '../src/index.js')],
+        main: ['@babel/polyfill', path.resolve(__dirname, '../example/index.js')],
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -34,7 +34,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: [/node_modules/],
-                include: path.resolve(__dirname, '../src'),
+                include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../example')],
                 loader: ['babel-loader', 'eslint-loader']
             },
             {
@@ -62,7 +62,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../view/index.html'),
+            template: path.resolve(__dirname, '../example/index.html'),
             filename: 'index.html'
         })
     ]

@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styles from './index.less';
 
-class App extends Component{
+class ImgPreview extends React.Component{
     constructor(props){
         super(props);
     }
 
     render(){
-        const app = (
-            <div>
-                react项目
+        const module = (
+            <div className = { styles['img-preview'] }>
+                
             </div>
         );
 
-        return app;
+        return module;
     }
 }
 
-export default App
+export default ImgPreview

@@ -47,11 +47,7 @@ module.exports = merge(baseConfig, {
 						loader: "style-loader" // 将 JS 字符串生成为 style 节点
 					},
 					{
-						loader: "css-loader", //
-						options: {
-							modules: true, //class局部作用域
-							localIdentName: "[local]--[hash:base64]"
-						}
+						loader: "css-loader",
 					},
 					{
 						loader: "sass-loader" // 将 Sass 编译成 CSS
@@ -64,6 +60,9 @@ module.exports = merge(baseConfig, {
 					loader: "style-loader" // creates style nodes from JS strings
 				}, {
 					loader: "css-loader",   // translates CSS into CommonJS
+					options: {
+						modules: true
+					}
 				}, {
 					loader: "less-loader", // compiles Less to CSS
 				}]

@@ -63,10 +63,6 @@ module.exports = merge(baseConfig, {
                     loader: MiniCssExtractPlugin.loader
                 }, {
                     loader: "css-loader",
-                    options: {
-                        modules: true, //class局部作用域
-                        localIdentName:'[local]--[hash:base64]'
-                    }
                 }, {
                     loader: "postcss-loader",
                     options: {

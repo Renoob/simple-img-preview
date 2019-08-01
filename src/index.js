@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'STYLES/index.css';
-import App from 'ROUTER/app';
+import ImgPreview from './containers';
 
-ReactDOM.render(<App />, document.getElementById('main'))
+export default ImgPreview
