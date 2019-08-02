@@ -61,7 +61,8 @@ module.exports = merge(baseConfig, {
 				}, {
 					loader: "css-loader",   // translates CSS into CommonJS
 					options: {
-						modules: true
+						modules: true,
+						localIdentName: "simple-[local]"
 					}
 				}, {
 					loader: "less-loader", // compiles Less to CSS

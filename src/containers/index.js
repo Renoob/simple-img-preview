@@ -1,6 +1,8 @@
 import React from 'react';
-import styles from './index.less';
 import PropTypes from 'prop-types';
+import styles from './index.less';
+import Icon from './iconfont';
+import PrevNext from './prevNext';
 
 class ImgPreview extends React.Component{
     constructor(props){
@@ -15,8 +17,10 @@ class ImgPreview extends React.Component{
         const { curImg } = this.state;
 
         const module = (
-            <div className = { styles['img-preview'] }>
+            <div className = { styles['img-preview-container'] }>
                 <img src = { curImg } />
+                <Icon className = { styles['close-icon'] } iconName = 'close-circle' />
+                <PrevNext />
             </div>
         );
 

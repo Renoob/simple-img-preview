@@ -33,7 +33,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: [/node_modules/],
+                exclude: [/node_modules/, /assets/],
                 include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../example')],
                 loader: ['babel-loader', 'eslint-loader']
             },
